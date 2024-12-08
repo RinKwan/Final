@@ -1,0 +1,131 @@
+{
+    "models": [
+        {
+            "name": "biking_dog",
+            "obj": "./models/Biking Dog/model.obj"
+        },
+        {
+            "name": "grass",
+            "obj": "./models/grass/grass.obj"
+        },
+        {
+            "name": "rock",
+            "obj": "./models/rock/rock.obj"
+        },
+        {
+            "name": "tree",
+            "obj": "./models/tree/low_poly_tree.obj"
+        },
+        {
+            "name": "platform",
+            "obj": "./models/platform/platform.obj"
+            
+        }
+    ],
+    "lights": [
+        {
+            "name": "ambient1",
+            "type": "ambient",
+            "color": "#F5A340",
+            "intensity": 0.1
+        },
+        {
+            "name": "directional1",
+            "type": "directional",
+            "color": "#F5A340",
+            "intensity": 1.5
+        },
+        {
+            "name": "point1",
+            "type": "point",
+            "color": "#F5A340",
+            "intensity": 0.8
+        }
+    ],
+    "scenegraph": {
+        "name": "root",
+        "type": "node",
+        "children": [
+            {
+                "name": "lights_node",
+                "type": "node",
+                "children": [
+                    {
+                        "name": "ambientlight1",
+                        "type": "light",
+                        "content": "ambient1"
+                    },
+                    {
+                        "name": "directionallight1",
+                        "type": "light",
+                        "content": "directional1",
+                        "transformation": {
+                            "translation": [0, 1, 1],
+                            "rotation": [30, 0, 0]
+                        }
+                    },
+                    {
+                        "name": "pointlight1",
+                        "type": "light",
+                        "content": "point1",
+                        "transformation": {
+                            "translation": [0, 1, 0]
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "platforn_node",
+                "type": "model",
+                "content": "platform",
+                "transformation": {
+                    "translation": [0, -1, 0]
+                },
+                "children": []
+            },
+            {
+                "name": "biking_dog",
+                "type": "model",
+                "content": "biking_dog",
+                "transformation": {
+                    "translation": [0, -0.73, 0],
+                    "scale": [0.25, 0.25, 0.25]
+                },
+                "children": []
+            },
+            {
+                "name": "grass",
+                "type": "model",
+                "content": "grass",
+                "transformation": {
+                    "translation": [0.75, -1.25, 0.75],
+                    "scale": [0.5, 0.5, 0.5],
+                    "rotation": [0, 45, 0]
+                },
+                "children": []
+            },
+            {
+                "name": "rock",
+                "type": "model",
+                "content": "rock",
+                "transformation": {
+                    "translation": [-0.5, -0.8, -0.8],
+                    "scale": [0.5, 0.5, 0.5]
+                    
+                },
+                "children": []
+            },
+            {
+                "name": "tree",
+                "type": "model",
+                "content": "tree",
+                "transformation": {
+                    "translation": [-0.3, -0.70, 0.75],
+                    "scale": [0.8, 0.8, 0.8],
+                    "rotation": [0, 22.5, 0]
+                },
+                "children": []
+            }
+        ]
+    }
+}
