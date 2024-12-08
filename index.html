@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="header-container">
+            <h1>ECS 175 Final Project</h1>
+            <h2>Procedural Generation | Particle Systems | Shadow Mapping</h2>
+        </div>
+        <div class="settings-container">
+            <div class="setting">
+                <h3>3D Scene</h3>
+                <div class="setting-item-container">
+                    <div id="openfileLabel" class="setting-item active">Load Scene File<br></div>
+                    <div id="openfileAction" class="setting-item inactive">
+                        <input id="openfileActionInput" type="file" multiple="false" accept="application/json">
+                    </div>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Procedural Generation</h3>
+                <div class="setting-item-container">
+                    <div id="seedAction" class="setting-item active">
+                        <label for="seedInput">Seed</label>
+                        <input id="seedInput" type="number" name="seedInput">
+                    </div>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Parcticle Systems</h3>
+                <div class="setting-item-container">
+                    <div id="PSAction" class="setting-item active">
+                        <input id="windInput" name="windInput" type="range" min="0" max="10">
+                        <label for="windInput">Wind</label>
+
+                        <input id="gravityInput" name="gravityInput" type="range" min="0" max="10">
+                        <label for="gravityInput">Gravity</label>
+                    </div>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Control</h3>
+                <div class="setting-item-container">
+                    <div id="controlCamera" class="setting-item inactive">Camera</div>
+                    <div id="controlSceneNode" class="setting-item inactive">[Hold Q] Scene Node</div>
+                </div>
+            </div>
+            <div class="setting">
+                <h3>Select Scene Node</h3>
+                <div class="setting-item-container">
+                    <div id="selectSceneNodeLabel" class="setting-item active">Select Scene Node</div>
+                    <select id="selectSceneNodeSelect" disabled></select>
+                </div>
+            </div>
+        </div>
+
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
